@@ -1,0 +1,273 @@
+{
+  "savedAt": "2026-07-21T08:31:42.040423+00:00",
+  "request": {
+    "entityId": "159173570",
+    "checkin": "2026-07-30",
+    "checkout": "2026-08-05",
+    "adults": "2",
+    "rooms": "1",
+    "children": ""
+  },
+  "canonical": {
+    "hotel_name": "Ramada Plaza by Wyndham Chennai",
+    "city": "",
+    "address": "36, Sardar Patel Rd, Venkta Puram, Guindy",
+    "star": 5,
+    "image": {
+      "id": "1302209397",
+      "type": "IMAGE_TYPE_BEDROOM",
+      "thumbnailUrl": "https://content.skyscnr.com/available/1302209397/rmt.jpg",
+      "galleryUrl": "https://content.skyscnr.com/available/1302209397/rmca.jpg",
+      "fullUrl": "https://content.skyscnr.com/available/1302209397/rmf.jpg",
+      "dynamicUrl": "https://content.skyscnr.com/available/1302209397/1302209397_WxH.jpg"
+    },
+    "hotel_map_id": "159173570",
+    "rating": null,
+    "reviews": {
+      "rating": null,
+      "count": 17
+    }
+  },
+  "partners": [
+    {
+      "provider": "Goibibo",
+      "status": "success",
+      "min_price": 11024,
+      "min_stay_total": 66142,
+      "currency": "INR",
+      "approx": false,
+      "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_gd%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D927087%2526rooms%253D1%2526closed_user_group%253Dgeneral%2526hb_data%253DUicnAwpEdkoFHqo-awfyzEYxUN-EKIia-2qVlRZx2kdyQwfLpIX-SOYtUvcXUE-9F3U99aSHC-luXVNJ518jjnIzMyKd_sIq5G73ncttn9d_mhIj4nQw9gpERS_l7a9PpSQdNvBsRIiF6qnidzyAzfbPWAXp1pcYruhWXepMepWfZwljM84eWSs5dNZbf5IQJODGWglHfNfn2Zngf3yKVuHOImebVafyG2HfwJHzWN-hyk9kTh52uo_WDWYoQS0d1vC58YedSFpTiSpnOkxBrpBqCfksIizHeQ7bHBaQhWQWWwO4RxnDYho4u1vLLfK6xgCkY-OAq42phgEh-kXX6niI6K5YWre6yWYoZkGmW4z_Rh3ZFV6EPRUJ_L5kaVNOV8zUcYliwGiO3-spNQgHRikxlF16D3aEZUpu2z5vnYULByvqVlA1eaTj2KbxiwMTAsvUJp6ruARV_JHM1keqMqiCb-iK07EeLpVzUtG3_sZYx2LVbh4%25253D%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D53384%2526quote_id%253DAANQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C8733126557969035890%2526channel%253Ddataapi%2526price_without_closed_user_group%253D56194%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiODliOTAyZGE1YTRhMjNkNzMwYzQ3MmU3N2M2YWQyMWEifSwidXJsIjoiaHR0cHM6Ly93d3cuZ29pYmliby5jb20vaG90ZWxzL2hvdGVsLWxpc3RpbmcvP2NoZWNraW49MjAyNjA3MzAmY2hlY2tvdXQ9MjAyNjA4MDUmcm9vbVN0cmluZz0xLTItMCZzZWFyY2hUZXh0PVJhbWFkYSUyMFBsYXphJTIwYnklMjBXeW5kaGFtJTIwQ2hlbm5haSZsb2N1c0lkPUNUTUFBJmxvY3VzVHlwZT1jaXR5JmNpdHlDb2RlPUNUTUFBJmNjPUlOJl91Q3VycmVuY3k9SU5SJm1ldGFQYXJ0bmVyPXNreXNjYW5uZXImbW10SWQ9MjAxNzA3MTMxODM2NDQzNjc0JmNtcD1NRVRBfG1ldGF8c2t5c2Nhbm5lcl9kaHw5MDYzNzY2MDU5NDQxMjY4NjE5fENQQyJ9%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+    },
+    {
+      "provider": "Agoda",
+      "status": "success",
+      "min_price": 11460,
+      "min_stay_total": 68757,
+      "currency": "INR",
+      "approx": false,
+      "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_ad%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D22%2526rooms%253D1%2526closed_user_group%253Dgeneral%2526hb_data%253DFhaT_nRIouCMpN6_6ToWmC64atrofncFjXaqtihLmhBRtE0y_qORPua0f5SZvccXN1JaCZDm5_N4YXc3ssmfglYG87cbsN1-Is6S9Tc30oUhl_lic6PrBoiAPmHNCj-lT1bUSmyDTs2mF1huy3mJUgmJA3GKK72Yus9NF7fpwZXzyftgsSzlF4cC1YUntlEoEu8pFlmwjKfhLd-WrRyE0WYXzOGvbcwDrh_fyICERfayFkaaNttpwIVVvEUHaIgIUOdVtqojApYJdOkA4DN9h6B_nQxwmo73J2IOnz_WHfV2jj0Dzq4uSJOpvBYKVRDhvf2_8iNdTMHdHqj_qtIC3rsIHK55fdtphntEkmRHPK6B7ke1rwLT0rxhGl0bb_HAw-BBlk10DpG-5PonOxvRkF85rfq-fk5PzRGtiSPerTcH9zlPxbpfe565-1dk4ZOhUJw9010vf4S2EHhunSIqrCeYwhMXRW_JjiTCe-wCIReUo-5En5rDGg%25253D%25253D%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D55494%2526quote_id%253DAQNQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C1568777665831433871%2526channel%253Ddataapi%2526price_without_closed_user_group%253D81414%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiNmNiNWU4MzNhMzc2MDQxZDRiNDU4YmQwNmY4NTkyZjQifSwidXJsIjoiaHR0cHM6Ly93d3cuYWdvZGEuY29tL2VuLWdiL3BhcnRuZXJzL3BhcnRuZXJzZWFyY2guYXNweD9jaWQ9MTg0NjM3MCZoaWQ9Mjk2MDgwNiZjdXJyZW5jeT1JTlImY2hlY2tpbj0yMDI2LTA3LTMwJmNoZWNrb3V0PTIwMjYtMDgtMDUmTnVtYmVyb2ZBZHVsdHM9MiZOdW1iZXJvZkNoaWxkcmVuPTAmUm9vbXM9MSZtY2lkPTMwMzgmbWFzdGVyUm9vbUlkPS0xJlRvdGFsUHJpY2U9Njg3NTcuMzImVG90YWxUYXg9OTk4OC45NiZUb3RhbEZlZT0zMjc0LjE1JlRvdGFsU3VyY2hhcmdlPTAmbWN1cj1JTlIifQ%25253D%25253D%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+    },
+    {
+      "provider": "Expedia",
+      "status": "success",
+      "min_price": 11520,
+      "min_stay_total": 69119,
+      "currency": "INR",
+      "approx": false,
+      "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_xp%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D1%2526rooms%253D1%2526hb_data%253Dwzfb9FrQccLMPBX0Da9THl234KAkTB0VvQuM19PUHZFGQT_kcOHZ-IX-EfYYOAUcD8AZffd5S4sFQaH9y3vQUEREm-4O3WYJBn9sTc55jWu8zXXxM_OCC-_YJ6r5khAojGY6wUbJ8dE2Eo4dMKMDr2vq39Ys6BUwh3LvLQHc1NI9Jiyhh_Xad4hZkcZwoWKnfse3VTq963hZdYlleH6lsYezQdudu_0wAUldlB4Kte2rgc_SGcRq0PpzdeahiUKoUcix4iHSC8fI76y-GRtnLiwFnl8-Sv89cZA0C3xq4-phvPbUMwo2xy755okqr-dx7juDGiogstGRBwGOC6_k0rIpall1UxerFMD2HSPdtHqJlK4DmD2RJv4jbUewgBWlqTAWPdl3HsPspX6mg3f3vEHDqv5DeFkIL-ptjRDDgL1HTAKs1ZDhyS9nHdkKsJ6pXn3kp6oOf88I1Mo14zhVIeURTWzNLANGYbEhYbtM6KzQg-5PGbRp%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D56194%2526quote_id%253DAANQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C-1420489700560496412%2526channel%253Ddataapi%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiMjA1ZDFkZGVjYzBkMDkyNTNkMWZhNjBhM2FlMzY3M2MifSwidXJsIjoiaHR0cHM6Ly93d3cuZXhwZWRpYS5jby5pbi9Ib3RlbC1TZWFyY2g%25252FdHBpZD0yNyZtcGU9MTc4NDYyMDQ0MyZlbmREYXRlPTIwMjYtMDgtMDUmYWR1bHRzPTImbG9jYWxlPWVuX0dCJmNoaWQ9NjFiZjc1ODUtZTc1Ny00NWRhLTliOWQtYWUwNjU3NDlkN2QyJmVhcGlkPTE3Jm1jdGM9MyZzdGFydERhdGU9MjAyNi0wNy0zMCZtcGQ9SU5SJm1wbj0yMDIyMTQ2NDMmY3VycmVuY3k9SU5SJnJhdGVwbGFuaWQ9MjExMzIyMDkyJm1wbT0yNCZtcHA9MSZtcG89RUMmc2VsZWN0ZWQ9MTkyNzY3NDYmbXBiPTEyOTI0LjYyJm1wcT05ODMzLjk1Jm1wYT01NjE5NC4wMCJ9%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+    },
+    {
+      "provider": "Booking.com",
+      "status": "success",
+      "min_price": 11604,
+      "min_stay_total": 69624,
+      "currency": "INR",
+      "approx": false,
+      "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_bc%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D13%2526rooms%253D1%2526hb_data%253DY-FF4NRDyDWlgYKYPoknUOF79oXg5L_l2_UnCGiAlDPf-R0vgs7RouNo43PgawwGLzXD9S_UTjoakZcPrnkhK3kLfvzCj4U1BQDyYocIn9Nn7Qro6TwLt9vWo0Cu47qgb8rr4DJ27diHHWrgG_ovDOU1YPOKfo28sC_FpOtNGaHsWvd0lUCXX4ND2TZXxrx6TJmmcRGaPqutlMInfd9h6gpheG_-c6oWNfcJoTPsIK7fc4w9l4gU69zRv9rZQaOq3adPlJOW69aSowUeuEUFYtovIRsgZtTYnD4HGgVnKJcNOSD5tj1BEvehEclmdWn7n-E-ApHaQSo_rMrv5Csgvuw6zR1i995wRhu92QeMC454YjEm7_qvOcR_vyOnrYfm_9YGN2Uknt1PSAl1oWBKy1YRQfVwCcK0U8crjxivODMC144MsbOosIRKox9JxBv2GTwD79NjA_7AbVMxYDXBSsofOOG3neWJ5ITVxP3K4kLV1RsEoBiaPC-FR_U%25253D%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D56194%2526quote_id%253DAANQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C5437295364013642899%2526channel%253Ddataapi%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiNDUwMmQ1YjE3MmY3Mzc0ZWYwYjJiNDcwODA5MWNlNmUiLCJyb29tX2NvdW50IjoiMSIsImJsb2NrX2lkIjoiMjMzNDExMzEyXzI0NjA3OTkzOV8yXzQxXzAifX0%25253D%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+    }
+  ],
+  "grid": [
+    {
+      "sig": "2|With Breakfast",
+      "room_class": "Room, 2 single beds, non smoking",
+      "room_name": "Room, 2 single beds, non smoking",
+      "meal": "With Breakfast",
+      "byPartner": {
+        "Expedia": {
+          "room_type": "Room, 2 single beds, non smoking",
+          "meal": "With Breakfast",
+          "price": 9366,
+          "tax": 2154,
+          "total": 11520,
+          "stay_total": 69119,
+          "nights": 6,
+          "currency": "INR",
+          "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_xp%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D1%2526rooms%253D1%2526hb_data%253Dwzfb9FrQccLMPBX0Da9THl234KAkTB0VvQuM19PUHZFGQT_kcOHZ-IX-EfYYOAUcD8AZffd5S4sFQaH9y3vQUEREm-4O3WYJBn9sTc55jWu8zXXxM_OCC-_YJ6r5khAojGY6wUbJ8dE2Eo4dMKMDr2vq39Ys6BUwh3LvLQHc1NI9Jiyhh_Xad4hZkcZwoWKnfse3VTq963hZdYlleH6lsYezQdudu_0wAUldlB4Kte2rgc_SGcRq0PpzdeahiUKoUcix4iHSC8fI76y-GRtnLiwFnl8-Sv89cZA0C3xq4-phvPbUMwo2xy755okqr-dx7juDGiogstGRBwGOC6_k0rIpall1UxerFMD2HSPdtHqJlK4DmD2RJv4jbUewgBWlqTAWPdl3HsPspX6mg3f3vEHDqv5DeFkIL-ptjRDDgL1HTAKs1ZDhyS9nHdkKsJ6pXn3kp6oOf88I1Mo14zhVIeURTWzNLANGYbEhYbtM6KzQg-5PGbRp%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D56194%2526quote_id%253DAANQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C-1420489700560496412%2526channel%253Ddataapi%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiMjA1ZDFkZGVjYzBkMDkyNTNkMWZhNjBhM2FlMzY3M2MifSwidXJsIjoiaHR0cHM6Ly93d3cuZXhwZWRpYS5jby5pbi9Ib3RlbC1TZWFyY2g%25252FdHBpZD0yNyZtcGU9MTc4NDYyMDQ0MyZlbmREYXRlPTIwMjYtMDgtMDUmYWR1bHRzPTImbG9jYWxlPWVuX0dCJmNoaWQ9NjFiZjc1ODUtZTc1Ny00NWRhLTliOWQtYWUwNjU3NDlkN2QyJmVhcGlkPTE3Jm1jdGM9MyZzdGFydERhdGU9MjAyNi0wNy0zMCZtcGQ9SU5SJm1wbj0yMDIyMTQ2NDMmY3VycmVuY3k9SU5SJnJhdGVwbGFuaWQ9MjExMzIyMDkyJm1wbT0yNCZtcHA9MSZtcG89RUMmc2VsZWN0ZWQ9MTkyNzY3NDYmbXBiPTEyOTI0LjYyJm1wcT05ODMzLjk1Jm1wYT01NjE5NC4wMCJ9%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+        },
+        "Goibibo": {
+          "room_type": "2 twin beds",
+          "meal": "With Breakfast",
+          "price": 8897,
+          "tax": 2126,
+          "total": 11024,
+          "stay_total": 66142,
+          "nights": 6,
+          "currency": "INR",
+          "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_gd%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D927087%2526rooms%253D1%2526closed_user_group%253Dgeneral%2526hb_data%253DUicnAwpEdkoFHqo-awfyzEYxUN-EKIia-2qVlRZx2kdyQwfLpIX-SOYtUvcXUE-9F3U99aSHC-luXVNJ518jjnIzMyKd_sIq5G73ncttn9d_mhIj4nQw9gpERS_l7a9PpSQdNvBsRIiF6qnidzyAzfbPWAXp1pcYruhWXepMepWfZwljM84eWSs5dNZbf5IQJODGWglHfNfn2Zngf3yKVuHOImebVafyG2HfwJHzWN-hyk9kTh52uo_WDWYoQS0d1vC58YedSFpTiSpnOkxBrpBqCfksIizHeQ7bHBaQhWQWWwO4RxnDYho4u1vLLfK6xgCkY-OAq42phgEh-kXX6niI6K5YWre6yWYoZkGmW4z_Rh3ZFV6EPRUJ_L5kaVNOV8zUcYliwGiO3-spNQgHRikxlF16D3aEZUpu2z5vnYULByvqVlA1eaTj2KbxiwMTAsvUJp6ruARV_JHM1keqMqiCb-iK07EeLpVzUtG3_sZYx2LVbh4%25253D%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D53384%2526quote_id%253DAANQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C8733126557969035890%2526channel%253Ddataapi%2526price_without_closed_user_group%253D56194%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiODliOTAyZGE1YTRhMjNkNzMwYzQ3MmU3N2M2YWQyMWEifSwidXJsIjoiaHR0cHM6Ly93d3cuZ29pYmliby5jb20vaG90ZWxzL2hvdGVsLWxpc3RpbmcvP2NoZWNraW49MjAyNjA3MzAmY2hlY2tvdXQ9MjAyNjA4MDUmcm9vbVN0cmluZz0xLTItMCZzZWFyY2hUZXh0PVJhbWFkYSUyMFBsYXphJTIwYnklMjBXeW5kaGFtJTIwQ2hlbm5haSZsb2N1c0lkPUNUTUFBJmxvY3VzVHlwZT1jaXR5JmNpdHlDb2RlPUNUTUFBJmNjPUlOJl91Q3VycmVuY3k9SU5SJm1ldGFQYXJ0bmVyPXNreXNjYW5uZXImbW10SWQ9MjAxNzA3MTMxODM2NDQzNjc0JmNtcD1NRVRBfG1ldGF8c2t5c2Nhbm5lcl9kaHw5MDYzNzY2MDU5NDQxMjY4NjE5fENQQyJ9%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+        }
+      }
+    },
+    {
+      "sig": "mix save combination|With Breakfast",
+      "room_class": "Mix and save combination",
+      "room_name": "Mix and save combination",
+      "meal": "With Breakfast",
+      "byPartner": {
+        "Agoda": {
+          "room_type": "Mix and save combination",
+          "meal": "With Breakfast",
+          "price": 9249,
+          "tax": 2211,
+          "total": 11460,
+          "stay_total": 68757,
+          "nights": 6,
+          "currency": "INR",
+          "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_ad%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D22%2526rooms%253D1%2526closed_user_group%253Dgeneral%2526hb_data%253DFhaT_nRIouCMpN6_6ToWmC64atrofncFjXaqtihLmhBRtE0y_qORPua0f5SZvccXN1JaCZDm5_N4YXc3ssmfglYG87cbsN1-Is6S9Tc30oUhl_lic6PrBoiAPmHNCj-lT1bUSmyDTs2mF1huy3mJUgmJA3GKK72Yus9NF7fpwZXzyftgsSzlF4cC1YUntlEoEu8pFlmwjKfhLd-WrRyE0WYXzOGvbcwDrh_fyICERfayFkaaNttpwIVVvEUHaIgIUOdVtqojApYJdOkA4DN9h6B_nQxwmo73J2IOnz_WHfV2jj0Dzq4uSJOpvBYKVRDhvf2_8iNdTMHdHqj_qtIC3rsIHK55fdtphntEkmRHPK6B7ke1rwLT0rxhGl0bb_HAw-BBlk10DpG-5PonOxvRkF85rfq-fk5PzRGtiSPerTcH9zlPxbpfe565-1dk4ZOhUJw9010vf4S2EHhunSIqrCeYwhMXRW_JjiTCe-wCIReUo-5En5rDGg%25253D%25253D%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D55494%2526quote_id%253DAQNQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C1568777665831433871%2526channel%253Ddataapi%2526price_without_closed_user_group%253D81414%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiNmNiNWU4MzNhMzc2MDQxZDRiNDU4YmQwNmY4NTkyZjQifSwidXJsIjoiaHR0cHM6Ly93d3cuYWdvZGEuY29tL2VuLWdiL3BhcnRuZXJzL3BhcnRuZXJzZWFyY2guYXNweD9jaWQ9MTg0NjM3MCZoaWQ9Mjk2MDgwNiZjdXJyZW5jeT1JTlImY2hlY2tpbj0yMDI2LTA3LTMwJmNoZWNrb3V0PTIwMjYtMDgtMDUmTnVtYmVyb2ZBZHVsdHM9MiZOdW1iZXJvZkNoaWxkcmVuPTAmUm9vbXM9MSZtY2lkPTMwMzgmbWFzdGVyUm9vbUlkPS0xJlRvdGFsUHJpY2U9Njg3NTcuMzImVG90YWxUYXg9OTk4OC45NiZUb3RhbEZlZT0zMjc0LjE1JlRvdGFsU3VyY2hhcmdlPTAmbWN1cj1JTlIifQ%25253D%25253D%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+        }
+      }
+    },
+    {
+      "sig": "standard|With Breakfast",
+      "room_class": "Standard king room",
+      "room_name": "Standard king room",
+      "meal": "With Breakfast",
+      "byPartner": {
+        "Booking.com": {
+          "room_type": "Standard king room",
+          "meal": "With Breakfast",
+          "price": 9366,
+          "tax": 2238,
+          "total": 11604,
+          "stay_total": 69624,
+          "nights": 6,
+          "currency": "INR",
+          "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_bc%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D13%2526rooms%253D1%2526hb_data%253DY-FF4NRDyDWlgYKYPoknUOF79oXg5L_l2_UnCGiAlDPf-R0vgs7RouNo43PgawwGLzXD9S_UTjoakZcPrnkhK3kLfvzCj4U1BQDyYocIn9Nn7Qro6TwLt9vWo0Cu47qgb8rr4DJ27diHHWrgG_ovDOU1YPOKfo28sC_FpOtNGaHsWvd0lUCXX4ND2TZXxrx6TJmmcRGaPqutlMInfd9h6gpheG_-c6oWNfcJoTPsIK7fc4w9l4gU69zRv9rZQaOq3adPlJOW69aSowUeuEUFYtovIRsgZtTYnD4HGgVnKJcNOSD5tj1BEvehEclmdWn7n-E-ApHaQSo_rMrv5Csgvuw6zR1i995wRhu92QeMC454YjEm7_qvOcR_vyOnrYfm_9YGN2Uknt1PSAl1oWBKy1YRQfVwCcK0U8crjxivODMC144MsbOosIRKox9JxBv2GTwD79NjA_7AbVMxYDXBSsofOOG3neWJ5ITVxP3K4kLV1RsEoBiaPC-FR_U%25253D%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D56194%2526quote_id%253DAANQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C5437295364013642899%2526channel%253Ddataapi%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiNDUwMmQ1YjE3MmY3Mzc0ZWYwYjJiNDcwODA5MWNlNmUiLCJyb29tX2NvdW50IjoiMSIsImJsb2NrX2lkIjoiMjMzNDExMzEyXzI0NjA3OTkzOV8yXzQxXzAifX0%25253D%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+        }
+      }
+    }
+  ],
+  "raw_rooms": [
+    {
+      "agent": "Booking.com",
+      "agentId": "h_bc",
+      "room_name": "Standard king room",
+      "room_sig": "standard",
+      "room_type_enum": "ROOM_TYPE_DOUBLE_ROOM",
+      "meal": "With Breakfast",
+      "meal_enum": "MEAL_PLAN_TYPE_BREAKFAST_INCLUDED",
+      "cancellation": "CANCELLATION_POLICY_TYPE_FREE_CANCELLATION",
+      "payment_type": "PAYMENT_TYPE_UNSPECIFIED",
+      "base_stay": 56194,
+      "tax_stay": 13430,
+      "total_stay": 69624,
+      "base_night": 9366,
+      "tax_night": 2238,
+      "total_night": 11604,
+      "currency": "INR",
+      "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_bc%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D13%2526rooms%253D1%2526hb_data%253DY-FF4NRDyDWlgYKYPoknUOF79oXg5L_l2_UnCGiAlDPf-R0vgs7RouNo43PgawwGLzXD9S_UTjoakZcPrnkhK3kLfvzCj4U1BQDyYocIn9Nn7Qro6TwLt9vWo0Cu47qgb8rr4DJ27diHHWrgG_ovDOU1YPOKfo28sC_FpOtNGaHsWvd0lUCXX4ND2TZXxrx6TJmmcRGaPqutlMInfd9h6gpheG_-c6oWNfcJoTPsIK7fc4w9l4gU69zRv9rZQaOq3adPlJOW69aSowUeuEUFYtovIRsgZtTYnD4HGgVnKJcNOSD5tj1BEvehEclmdWn7n-E-ApHaQSo_rMrv5Csgvuw6zR1i995wRhu92QeMC454YjEm7_qvOcR_vyOnrYfm_9YGN2Uknt1PSAl1oWBKy1YRQfVwCcK0U8crjxivODMC144MsbOosIRKox9JxBv2GTwD79NjA_7AbVMxYDXBSsofOOG3neWJ5ITVxP3K4kLV1RsEoBiaPC-FR_U%25253D%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D56194%2526quote_id%253DAANQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C5437295364013642899%2526channel%253Ddataapi%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiNDUwMmQ1YjE3MmY3Mzc0ZWYwYjJiNDcwODA5MWNlNmUiLCJyb29tX2NvdW50IjoiMSIsImJsb2NrX2lkIjoiMjMzNDExMzEyXzI0NjA3OTkzOV8yXzQxXzAifX0%25253D%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+    },
+    {
+      "agent": "Expedia",
+      "agentId": "h_xp",
+      "room_name": "Room, 2 single beds, non smoking",
+      "room_sig": "2",
+      "room_type_enum": "ROOM_TYPE_TWIN_ROOM",
+      "meal": "With Breakfast",
+      "meal_enum": "MEAL_PLAN_TYPE_BREAKFAST_INCLUDED",
+      "cancellation": "CANCELLATION_POLICY_TYPE_FREE_CANCELLATION",
+      "payment_type": "PAYMENT_TYPE_PREPAID",
+      "base_stay": 56194,
+      "tax_stay": 12925,
+      "total_stay": 69119,
+      "base_night": 9366,
+      "tax_night": 2154,
+      "total_night": 11520,
+      "currency": "INR",
+      "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_xp%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D1%2526rooms%253D1%2526hb_data%253Dwzfb9FrQccLMPBX0Da9THl234KAkTB0VvQuM19PUHZFGQT_kcOHZ-IX-EfYYOAUcD8AZffd5S4sFQaH9y3vQUEREm-4O3WYJBn9sTc55jWu8zXXxM_OCC-_YJ6r5khAojGY6wUbJ8dE2Eo4dMKMDr2vq39Ys6BUwh3LvLQHc1NI9Jiyhh_Xad4hZkcZwoWKnfse3VTq963hZdYlleH6lsYezQdudu_0wAUldlB4Kte2rgc_SGcRq0PpzdeahiUKoUcix4iHSC8fI76y-GRtnLiwFnl8-Sv89cZA0C3xq4-phvPbUMwo2xy755okqr-dx7juDGiogstGRBwGOC6_k0rIpall1UxerFMD2HSPdtHqJlK4DmD2RJv4jbUewgBWlqTAWPdl3HsPspX6mg3f3vEHDqv5DeFkIL-ptjRDDgL1HTAKs1ZDhyS9nHdkKsJ6pXn3kp6oOf88I1Mo14zhVIeURTWzNLANGYbEhYbtM6KzQg-5PGbRp%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D56194%2526quote_id%253DAANQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C-1420489700560496412%2526channel%253Ddataapi%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiMjA1ZDFkZGVjYzBkMDkyNTNkMWZhNjBhM2FlMzY3M2MifSwidXJsIjoiaHR0cHM6Ly93d3cuZXhwZWRpYS5jby5pbi9Ib3RlbC1TZWFyY2g%25252FdHBpZD0yNyZtcGU9MTc4NDYyMDQ0MyZlbmREYXRlPTIwMjYtMDgtMDUmYWR1bHRzPTImbG9jYWxlPWVuX0dCJmNoaWQ9NjFiZjc1ODUtZTc1Ny00NWRhLTliOWQtYWUwNjU3NDlkN2QyJmVhcGlkPTE3Jm1jdGM9MyZzdGFydERhdGU9MjAyNi0wNy0zMCZtcGQ9SU5SJm1wbj0yMDIyMTQ2NDMmY3VycmVuY3k9SU5SJnJhdGVwbGFuaWQ9MjExMzIyMDkyJm1wbT0yNCZtcHA9MSZtcG89RUMmc2VsZWN0ZWQ9MTkyNzY3NDYmbXBiPTEyOTI0LjYyJm1wcT05ODMzLjk1Jm1wYT01NjE5NC4wMCJ9%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+    },
+    {
+      "agent": "Agoda",
+      "agentId": "h_ad",
+      "room_name": "Mix and save combination",
+      "room_sig": "mix save combination",
+      "room_type_enum": "ROOM_TYPE_GENERIC_ROOM",
+      "meal": "With Breakfast",
+      "meal_enum": "MEAL_PLAN_TYPE_BREAKFAST_INCLUDED",
+      "cancellation": "CANCELLATION_POLICY_TYPE_FREE_CANCELLATION",
+      "payment_type": "PAYMENT_TYPE_UNSPECIFIED",
+      "base_stay": 55494,
+      "tax_stay": 13263,
+      "total_stay": 68757,
+      "base_night": 9249,
+      "tax_night": 2211,
+      "total_night": 11460,
+      "currency": "INR",
+      "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_ad%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D22%2526rooms%253D1%2526closed_user_group%253Dgeneral%2526hb_data%253DFhaT_nRIouCMpN6_6ToWmC64atrofncFjXaqtihLmhBRtE0y_qORPua0f5SZvccXN1JaCZDm5_N4YXc3ssmfglYG87cbsN1-Is6S9Tc30oUhl_lic6PrBoiAPmHNCj-lT1bUSmyDTs2mF1huy3mJUgmJA3GKK72Yus9NF7fpwZXzyftgsSzlF4cC1YUntlEoEu8pFlmwjKfhLd-WrRyE0WYXzOGvbcwDrh_fyICERfayFkaaNttpwIVVvEUHaIgIUOdVtqojApYJdOkA4DN9h6B_nQxwmo73J2IOnz_WHfV2jj0Dzq4uSJOpvBYKVRDhvf2_8iNdTMHdHqj_qtIC3rsIHK55fdtphntEkmRHPK6B7ke1rwLT0rxhGl0bb_HAw-BBlk10DpG-5PonOxvRkF85rfq-fk5PzRGtiSPerTcH9zlPxbpfe565-1dk4ZOhUJw9010vf4S2EHhunSIqrCeYwhMXRW_JjiTCe-wCIReUo-5En5rDGg%25253D%25253D%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D55494%2526quote_id%253DAQNQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C1568777665831433871%2526channel%253Ddataapi%2526price_without_closed_user_group%253D81414%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiNmNiNWU4MzNhMzc2MDQxZDRiNDU4YmQwNmY4NTkyZjQifSwidXJsIjoiaHR0cHM6Ly93d3cuYWdvZGEuY29tL2VuLWdiL3BhcnRuZXJzL3BhcnRuZXJzZWFyY2guYXNweD9jaWQ9MTg0NjM3MCZoaWQ9Mjk2MDgwNiZjdXJyZW5jeT1JTlImY2hlY2tpbj0yMDI2LTA3LTMwJmNoZWNrb3V0PTIwMjYtMDgtMDUmTnVtYmVyb2ZBZHVsdHM9MiZOdW1iZXJvZkNoaWxkcmVuPTAmUm9vbXM9MSZtY2lkPTMwMzgmbWFzdGVyUm9vbUlkPS0xJlRvdGFsUHJpY2U9Njg3NTcuMzImVG90YWxUYXg9OTk4OC45NiZUb3RhbEZlZT0zMjc0LjE1JlRvdGFsU3VyY2hhcmdlPTAmbWN1cj1JTlIifQ%25253D%25253D%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+    },
+    {
+      "agent": "Goibibo",
+      "agentId": "h_gd",
+      "room_name": "2 twin beds",
+      "room_sig": "2",
+      "room_type_enum": "ROOM_TYPE_TWIN_ROOM",
+      "meal": "With Breakfast",
+      "meal_enum": "MEAL_PLAN_TYPE_BREAKFAST_INCLUDED",
+      "cancellation": "CANCELLATION_POLICY_TYPE_FREE_CANCELLATION",
+      "payment_type": "PAYMENT_TYPE_PREPAID",
+      "base_stay": 53384,
+      "tax_stay": 12758,
+      "total_stay": 66142,
+      "base_night": 8897,
+      "tax_night": 2126,
+      "total_night": 11024,
+      "currency": "INR",
+      "deep_link": "https://agw.skyscnr.com/v1/redirect?pageUrl=https%3A%2F%2Fskyscanner.pxf.io%2Fc%2F6139624%2F1103266%2F13416%3Fu%3Dhttps%253A%252F%252Fwww.skyscanner.co.in%252Fhotel_deeplink%252F4.0%252FIN%252Fen-GB%252FINR%252Fh_gd%252F159173570%252F2026-07-30%252F2026-08-05%252Fhotel%252Fhotel%252Fhotels%253Flegacy_provider_id%253D927087%2526rooms%253D1%2526closed_user_group%253Dgeneral%2526hb_data%253DUicnAwpEdkoFHqo-awfyzEYxUN-EKIia-2qVlRZx2kdyQwfLpIX-SOYtUvcXUE-9F3U99aSHC-luXVNJ518jjnIzMyKd_sIq5G73ncttn9d_mhIj4nQw9gpERS_l7a9PpSQdNvBsRIiF6qnidzyAzfbPWAXp1pcYruhWXepMepWfZwljM84eWSs5dNZbf5IQJODGWglHfNfn2Zngf3yKVuHOImebVafyG2HfwJHzWN-hyk9kTh52uo_WDWYoQS0d1vC58YedSFpTiSpnOkxBrpBqCfksIizHeQ7bHBaQhWQWWwO4RxnDYho4u1vLLfK6xgCkY-OAq42phgEh-kXX6niI6K5YWre6yWYoZkGmW4z_Rh3ZFV6EPRUJ_L5kaVNOV8zUcYliwGiO3-spNQgHRikxlF16D3aEZUpu2z5vnYULByvqVlA1eaTj2KbxiwMTAsvUJp6ruARV_JHM1keqMqiCb-iK07EeLpVzUtG3_sZYx2LVbh4%25253D%2526q_datetime_utc%253D2026-07-21T08%25253A31%25253A39%2526ticket_price%253D53384%2526quote_id%253DAANQuFC-AgEAAAAACTE1OTE3MzU3MA%25257C8733126557969035890%2526channel%253Ddataapi%2526price_without_closed_user_group%253D56194%2526tm_place_name%253DChennai%2526deeplink_data%253DeyJmaWVsZHMiOnsic2lnbmF0dXJlIjoiODliOTAyZGE1YTRhMjNkNzMwYzQ3MmU3N2M2YWQyMWEifSwidXJsIjoiaHR0cHM6Ly93d3cuZ29pYmliby5jb20vaG90ZWxzL2hvdGVsLWxpc3RpbmcvP2NoZWNraW49MjAyNjA3MzAmY2hlY2tvdXQ9MjAyNjA4MDUmcm9vbVN0cmluZz0xLTItMCZzZWFyY2hUZXh0PVJhbWFkYSUyMFBsYXphJTIwYnklMjBXeW5kaGFtJTIwQ2hlbm5haSZsb2N1c0lkPUNUTUFBJmxvY3VzVHlwZT1jaXR5JmNpdHlDb2RlPUNUTUFBJmNjPUlOJl91Q3VycmVuY3k9SU5SJm1ldGFQYXJ0bmVyPXNreXNjYW5uZXImbW10SWQ9MjAxNzA3MTMxODM2NDQzNjc0JmNtcD1NRVRBfG1ldGF8c2t5c2Nhbm5lcl9kaHw5MDYzNzY2MDU5NDQxMjY4NjE5fENQQyJ9%2526tm_stars%253D5%2526client_id%253Dskyscanner_b2b%2526price_policy%253D1%2526pre_redirect_id%253D29d56fb2-3150-4b94-a656-c9bf33020d53%2526tm_city_code%253DIMAA%2526max_price%253D56194%2526guests%253D2%2526request_id%253Dcb949ff2-2a44-42d2-bfca-a90cd8f101ba%2526tm_country_code%253DIN%2526api_pbs%253Dtrue%2526app_id%253DTu816HyM6nHirguAc87SsV8Ye6Of2CTLP%2525252FBDPwNIOLZL1W3ADsUaCX7NOX7KFBqW&impactMediaPartnerId=6139624"
+    }
+  ],
+  "agents": {
+    "h_ad": {
+      "id": "h_ad",
+      "logoUrl": "https://logos.skyscnr.com/images/websites/220x80/h_ad.png",
+      "agentType": "AGENT_TYPE_OTA",
+      "name": "Agoda"
+    },
+    "h_bc": {
+      "id": "h_bc",
+      "logoUrl": "https://logos.skyscnr.com/images/websites/220x80/h_bc.png",
+      "agentType": "AGENT_TYPE_OTA",
+      "name": "Booking.com"
+    },
+    "h_df": {
+      "id": "h_df",
+      "logoUrl": "https://logos.skyscnr.com/images/websites/220x80/h_df.png",
+      "agentType": "AGENT_TYPE_IBE",
+      "name": "Official website"
+    },
+    "h_fd": {
+      "id": "h_fd",
+      "logoUrl": "https://logos.skyscnr.com/images/websites/220x80/h_fd.png",
+      "agentType": "AGENT_TYPE_OTA",
+      "name": "Vio.com"
+    },
+    "h_gd": {
+      "id": "h_gd",
+      "logoUrl": "https://logos.skyscnr.com/images/websites/220x80/h_gd.png",
+      "agentType": "AGENT_TYPE_OTA",
+      "name": "Goibibo"
+    },
+    "h_pi": {
+      "id": "h_pi",
+      "logoUrl": "https://logos.skyscnr.com/images/websites/220x80/h_pi.png",
+      "agentType": "AGENT_TYPE_OTA",
+      "name": "Prestigia"
+    },
+    "h_r1": {
+      "id": "h_r1",
+      "logoUrl": "https://logos.skyscnr.com/images/websites/220x80/h_r1.png",
+      "agentType": "AGENT_TYPE_UNSPECIFIED",
+      "name": "Radisson"
+    },
+    "h_xp": {
+      "id": "h_xp",
+      "logoUrl": "https://logos.skyscnr.com/images/websites/220x80/h_xp.png",
+      "agentType": "AGENT_TYPE_OTA",
+      "name": "Expedia"
+    },
+    "h_yt": {
+      "id": "h_yt",
+      "logoUrl": "https://logos.skyscnr.com/images/websites/220x80/h_yt.png",
+      "agentType": "AGENT_TYPE_OTA",
+      "name": "Yatra"
+    }
+  }
+}
