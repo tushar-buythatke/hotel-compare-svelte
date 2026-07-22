@@ -29,7 +29,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
 API_BASE = "https://partners.api.skyscanner.net/apiservices"
-API_KEY = "bu394296223254246835906042483637"
+API_KEY = ""
 MARKET, LOCALE, CURRENCY = "IN", "en-GB", "INR"
 PORT = 4460
 
