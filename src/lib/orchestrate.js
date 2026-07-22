@@ -57,7 +57,7 @@ export async function runCompare(target, query, { onResolved, onPartner, onDone,
 			const res = await liveFetch({ pos: p.pos, ids, query, requestId });
 			if (res && res.status === "success") {
 				log(`[${provider}] ✅ min=${res.partner && res.partner.min_price} rooms=${res.partner && res.partner.rooms.length} grid=${res.grid && res.grid.length}`);
-				onPartner && onPartner({ pos: p.pos, provider, status: "success", partner: res.partner, grid: res.grid });
+				onPartner && onPartner({ pos: p.pos, provider, status: "success", partner: res.partner, grid: res.grid, hotel: res.hotel });
 			} else {
 				log(`[${provider}] empty`, res && res.status);
 				onPartner && onPartner({ pos: p.pos, provider, status: "empty" });
@@ -69,7 +69,8 @@ export async function runCompare(target, query, { onResolved, onPartner, onDone,
 	});
 
 	await Promise.allSettled(tasks);
-	try { await finish(requestId); } catch {}
+	let finalHotel;
+	try { const done = await finish(requestId); finalHotel = done && done.hotel; } catch {}
 
 	// LAST PASS — Skyscanner agents (best-effort; a failure never affects the compare above).
 	try {
@@ -81,5 +82,5 @@ export async function runCompare(target, query, { onResolved, onPartner, onDone,
 	} catch (e) { log("skyscanner pass failed", e.message); }
 
 	log("runCompare done");
-	onDone && onDone();
+	onDone && onDone(finalHotel);
 }
