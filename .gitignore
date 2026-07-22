@@ -1,3 +1,7 @@
 node_modules/
 
 dist/
+
+# Dev-only fixtures: captured partner responses used by devSampleRaw() in local (non-extension) mode.
+# Kept out of git — they're bulky and can carry third-party tokens scraped from partner pages.
+public/samples/
