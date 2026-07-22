@@ -1319,7 +1319,7 @@
   .home-sub { font-size: clamp(14px, 1.5vw, 16px); line-height: 1.6; color: var(--v2-slate); max-width: 420px; margin: 0; }
 
   /* signature: unified search module — full width, below the hero copy */
-  .search-module { position: relative; z-index: 2; background: var(--v2-surface); border: 1px solid var(--v2-line); border-radius: 20px;
+  .search-module { position: relative; z-index: 46; background: var(--v2-surface); border: 1px solid var(--v2-line); border-radius: 20px;
     box-shadow: var(--shadow-lift); padding: 12px; margin: 0 auto; }
   .sm-source { display: flex; align-items: center; justify-content: flex-end; gap: 10px; padding: 2px 4px 10px; }
   .sm-source-lbl { font-size: 12.5px; font-weight: 500; color: var(--v2-slate); }
