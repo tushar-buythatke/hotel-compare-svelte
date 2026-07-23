@@ -36,7 +36,10 @@
   // text the CURRENT `suggestions` array actually resolved for — lets submitSearch() tell a fresh
   // suggestion apart from a stale one still sitting there from the previous query (see submitSearch).
   let suggestionsFor = "";
-  let source = "emt";           // typeahead engine: emt | mmt | cleartrip (diagnostic toggle)
+  // typeahead engine: emt | mmt | cleartrip (diagnostic toggle). MMT default — its autosuggest actually
+  // parses natural-language queries ("hotels in pune", "pune resorts") down to the real city; EMT/Cleartrip
+  // only fuzzy-match the raw text against city/hotel names and return unrelated noise for the same input.
+  let source = "mmt";
 
   // ── stay form ──
   const isoDay = (n) => new Date(Date.now() + n * 864e5).toISOString().slice(0, 10);
@@ -196,6 +199,14 @@
   function pickCi(iso) { ci = iso; if (!co || co <= iso) co = addDaysISO(iso, 1); openDate = null; }
   function pickCo(iso) { co = iso; openDate = null; }
 
+  // "hotels in pune", "pune resorts near me" etc. typed then Enter'd before a suggestion is picked — strip
+  // the filler so the bare-text fallback below searches "pune", not the literal phrase (which produced
+  // "Hotels in hotels in pune" and zero real matches, since EMT/Cleartrip fuzzy-match raw text literally).
+  const stripSearchFiller = (s) =>
+    s.replace(/^(hotels?|stays?|rooms?|resorts?|villas?|places?)\s+(in|near|at|around)\s+/i, "")
+     .replace(/\s+(hotels?|stays?|rooms?|resorts?|villas?)\s*$/i, "")
+     .trim() || s;
+
   // Homepage Search button / Enter: pick the top suggestion if we have one, else run a city search on the text.
   function submitSearch() {
     // only trust suggestions[0] if it actually resolved for the text currently in the box — otherwise a
@@ -203,7 +214,7 @@
     // the PREVIOUS query's top suggestion (e.g. a hotel) instead of searching what's actually typed.
     const q = query.trim();
     if (suggestions && suggestions.length && suggestionsFor === q) { pick(suggestions[0]); return; }
-    if (q) pick({ name: q, city: q, type: "city" });
+    if (q) { const city = stripSearchFiller(q); pick({ name: city, city, type: "city" }); }
   }
   function onSearchKey(e) {
     if (e.key === "Enter") { e.preventDefault(); showSuggest = false; submitSearch(); }
@@ -217,8 +228,9 @@
     resolveAndCompare({ name: s.name, city: s.city, lat: s.lat, lng: s.lng, emt_hotel_id: s.emt_hotel_id, entityId: s.entityId });
   }
 
-  // Resolve a hotel (from autosuggest OR a restored URL) to full ids via EMT search by name, then compare.
-  // An autosuggest/URL hotel carries only name (+maybe ecid) — EMT search gives hid + geo + durl.
+  // Resolve a hotel (from autosuggest OR a restored URL) to full ids via EMT/MMT/Cleartrip search by name —
+  // this only ENRICHES the pick (image/price/rating/durl); a picked suggestion always lands on compare, same
+  // as clicking a listing card does, using its own name/city/lat/lng when no richer listing match is found.
   let destResolving = false;
   async function resolveAndCompare({ name, city, lat, lng, emt_hotel_id, entityId }) {
     query = name;
@@ -228,14 +240,11 @@
       canonical = null; partners = {}; grid = []; doneCount = 0; planCount = 0;
       startCompare(); return;
     }
-    // Resolve BEFORE navigating anywhere — we don't yet know if this lands on the hotel's compare page or
-    // (on a miss) the city listing, so don't flip `view` until we know. Flipping early flashed the hotel
-    // detail page open then immediately bounced back to listing on a miss — jarring and wrong.
     const wantEc = String(emt_hotel_id || "").replace(/^EMTHOTEL-/i, "").toLowerCase();
     let card = null;
     destResolving = true;
     try {
-      const r = await listHotels({ city: city || "", params: queryParams, name });
+      const r = await listHotels({ city: city || "", params: queryParams, name, lat, lng });
       const hotels = (r && r.hotels) || [];
       // Find the picked hotel in the listing — by emt id, else by name — to enrich it (hid + durl + image).
       card = hotels.find((h) => wantEc && String(h.emt_hotel_id || "").toLowerCase() === wantEc)
@@ -243,45 +252,50 @@
         || null;
     } catch (e) { log("resolve hotel failed", e.message); }
     destResolving = false;
-    if (card) {
-      selected = { name: card.name, city: city || card.city || "", lat: card.lat, lng: card.lng, type: "hotel",
-        emt_hotel_id: card.emt_hotel_id, emt_secondary_id: card.emt_secondary_id, emt_durl: card.durl,
-        image: card.image, address: card.address, rating: card.rating,
-        locality: card.locality, propertyType: card.property_type, highlights: card.highlights,
-        amenities: card.amenities, thumbnails: card.thumbnails, discount: card.discount,
-        meal: card.meal, freeBreakfast: card.free_breakfast, checkinTime: card.checkin_time,
-        checkoutTime: card.checkout_time, cashbackOffer: card.cashback_offer, roomOffer: card.room_offer };
-      view = "compare"; status = "resolving"; canonical = null; partners = {}; grid = []; doneCount = 0; planCount = 0;
-      startCompare();
-    } else {
-      // Couldn't confidently identify the picked hotel in the listing → show the SEARCH RESULTS so the user
-      // picks the right one. NEVER guess (a blind hotels[0] fallback silently compared a different property).
-      log("hotel not found in listing → showing search results for", city || name);
-      loadListing({ name, city, type: "hotel" });
-    }
+    selected = card
+      ? { name: card.name, city: city || card.city || "", lat: card.lat ?? lat, lng: card.lng ?? lng, type: "hotel",
+          emt_hotel_id: card.emt_hotel_id, emt_secondary_id: card.emt_secondary_id, emt_durl: card.durl,
+          image: card.image, address: card.address, rating: card.rating,
+          locality: card.locality, propertyType: card.property_type, highlights: card.highlights,
+          amenities: card.amenities, thumbnails: card.thumbnails, discount: card.discount,
+          meal: card.meal, freeBreakfast: card.free_breakfast, checkinTime: card.checkin_time,
+          checkoutTime: card.checkout_time, cashbackOffer: card.cashback_offer, roomOffer: card.room_offer }
+      // No richer listing match — same trust level as pickHotel(card): go straight in on what the
+      // suggestion itself gave us, and let runCompare resolve each partner live from name/city/lat/lng.
+      : { name, city: city || "", lat: lat ?? null, lng: lng ?? null, type: "hotel" };
+    view = "compare"; status = "resolving"; canonical = null; partners = {}; grid = []; doneCount = 0; planCount = 0;
+    startCompare();
   }
 
   // city → hotel LISTING via EMT search (real images/prices/ratings + EMT hotel id + filters)
+  let listSeq = 0;
   async function loadListing(s) {
     listingSource = s;
     view = "listing"; listing = []; listingLoading = true; listingTitle = s.city || s.name; listingPage = 1; listingHasMore = false;
     syncHash();
+    // Guard against an older, slower search (e.g. "dublin") resolving AFTER a newer one ("new york") and
+    // silently overwriting it — loadListing had no equivalent of startCompare's runSeq/stale() guard.
+    const myRun = ++listSeq;
+    const stale = () => myRun !== listSeq;
     try {
-      const r = await listHotels({ city: s.city || s.name, params: queryParams, name: s.type === "hotel" ? s.name : "", page: 1, filters: filterObj() });
+      const r = await listHotels({ city: s.city || s.name, params: queryParams, name: s.type === "hotel" ? s.name : "", page: 1, filters: filterObj(), lat: s.lat, lng: s.lng, countryCode: s.country_code || s.mmt_country_code });
+      if (stale()) return;
       listing = (r && r.hotels) || [];
       // Optimistic: as long as page 1 returned hotels, probe for more on scroll. loadMore stops the moment a
       // page adds nothing new — so this works whether EMT paginates, caps its page size, or is a small city.
       listingHasMore = listing.length > 0;
-    } catch (e) { log("listing failed", e.message); listing = []; }
-    listingLoading = false;
+    } catch (e) { if (!stale()) { log("listing failed", e.message); listing = []; } }
+    if (!stale()) listingLoading = false;
   }
 
   async function loadMore() {
     if (listingLoadingMore || !listingHasMore || !listingSource) return;
     listingLoadingMore = true;
-    const next = listingPage + 1, s = listingSource;
+    const next = listingPage + 1, s = listingSource, myRun = listSeq;
+    const stale = () => myRun !== listSeq;
     try {
-      const r = await listHotels({ city: s.city || s.name, params: queryParams, name: s.type === "hotel" ? s.name : "", page: next, filters: filterObj() });
+      const r = await listHotels({ city: s.city || s.name, params: queryParams, name: s.type === "hotel" ? s.name : "", page: next, filters: filterObj(), lat: s.lat, lng: s.lng, countryCode: s.country_code || s.mmt_country_code });
+      if (stale()) return;
       const more = (r && r.hotels) || [];
       const seen = new Set(listing.map((h) => h.emt_hotel_id || h.name));
       const added = more.filter((h) => !seen.has(h.emt_hotel_id || h.name));
@@ -289,8 +303,8 @@
       listingPage = next;
       // Stop when a page brings nothing new (EMT exhausted or repeated the same page). Soft cap as a safety net.
       listingHasMore = added.length > 0 && next < 25;
-    } catch (e) { log("loadMore failed", e.message); }
-    listingLoadingMore = false;
+    } catch (e) { if (!stale()) log("loadMore failed", e.message); }
+    if (!stale()) listingLoadingMore = false;
   }
 
   // Called after any filter-pill/price mutation (fStars/fTa/fProps/fAmen/fSort/fMin/fMax are plain top-level
@@ -366,6 +380,13 @@
   }
 
   function applyStay() {
+    // "Update" only ever re-ran the CURRENT destination with new dates/occupancy — it never checked
+    // whether the search box text had actually changed, so typing a new destination and clicking Update
+    // silently kept showing the old one. If the text no longer matches what's loaded, treat it as a fresh
+    // destination search (same path as Enter/submitSearch) instead of just re-fetching the stale one.
+    const q = query.trim();
+    const current = (view === "listing" ? (listingSource && (listingSource.city || listingSource.name)) : (selected && selected.name)) || "";
+    if (q && q.toLowerCase() !== current.toLowerCase()) { submitSearch(); return; }
     if (view === "listing" && listingSource) { syncHash(); loadListing(listingSource); }
     else if (view === "compare" && selected) { syncHash(); startCompare(); }
   }
@@ -555,7 +576,7 @@
           <div class="sb-dest-field">
             <span class="sb-lbl">Destination</span>
             <input type="text" autocomplete="off" placeholder="Search a city or hotel…" bind:value={query}
-              on:input={onInput} on:focus={() => (showSuggest = suggestions.length > 0)}
+              on:input={onInput} on:keydown={onSearchKey} on:focus={() => (showSuggest = suggestions.length > 0)}
               on:blur={() => setTimeout(() => (showSuggest = false), 150)} />
           </div>
           {#if query}
@@ -625,7 +646,7 @@
         </div>
       {/if}
       <span class="sb-nights">{nights} night{nights > 1 ? "s" : ""}</span>
-      <button class="sb-update" on:click={applyStay}><span class="sm-go-ic">{@html icon("search")}</span> Update</button>
+      <button class="sb-update" on:click={applyStay}><span class="sm-go-ic">{@html icon("search")}</span> Search</button>
     </div>
   {/if}
 

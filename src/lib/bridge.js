@@ -191,13 +191,17 @@ export async function skyscanner(target, query, requestId) {
 
 // City → hotel LISTING via EMT search (images + prices + ratings + EMT hotel id). The SW runs the
 // credentialed EMT call directly and returns normalized cards. Returns { hotels: [...] }.
-export async function listHotels({ city, params, name, page, filters }) {
+export async function listHotels({ city, params, name, page, filters, lat, lng, countryCode }) {
 	const requestId = `list_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
 	const f = filters || {};
 	const payload = { city, name: name || "", checkin: params.checkin, checkout: params.checkout,
 		rooms: params.rooms, adults: params.adults, children: params.children, childAge: params.child_age, page: page || 1,
 		stars: f.stars || [], taRating: f.taRating || [], amenities: f.amenities || [], props: f.props || [],
-		minPrice: f.minPrice ?? null, maxPrice: f.maxPrice ?? null, sort: f.sort || "popular", requestId };
+		minPrice: f.minPrice ?? null, maxPrice: f.maxPrice ?? null, sort: f.sort || "popular", requestId,
+		// From the picked suggestion, when EMT's own autosuggest resolved one — the only real disambiguator
+		// for a city name that collides across countries (e.g. "dublin": Ireland/US/Australia/Sierra Leone
+		// all match with identical relevance; a bare string alone can't tell them apart).
+		lat: lat != null ? +lat : null, lng: lng != null ? +lng : null, countryCode: countryCode || null };
 	if (MODE === "ext") return await callExt("hotelListFetch", payload);
 	return await devSend("hotelList", payload, requestId);
 }
