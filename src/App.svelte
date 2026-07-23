@@ -443,13 +443,15 @@
   // ── compare: per-partner strip (live prices only) ──
   $: merged = PARTNER_LIST.map((who) => {
     const live = partners[who];
-    if (live && live.min_price != null) return { who, val: live.min_price, tax: live.min_tax, stay: live.min_stay_total ?? (live.min_price * nights), approx: live.approx, src: "live", deepLink: live.deepLink };
+    if (live && live.min_price != null) return { who, val: live.min_price, tax: live.min_tax, incl: live.min_tax ? live.min_price + live.min_tax : live.min_price, stay: live.min_stay_total ?? (live.min_price * nights), approx: live.approx, src: "live", deepLink: live.deepLink };
     return { who, val: null, stay: null, src: null, status: live ? live.status : null };
   });
-  $: best = merged.filter((m) => m.val != null).sort((a, b) => a.val - b.val)[0] || null;
+  // Sort by the TAX-INCLUSIVE per-night figure (what's actually shown as the headline price) — sorting by
+  // base-only could crown a partner "best" whose real (incl. tax) price is higher than a rival's.
+  $: best = merged.filter((m) => m.val != null).sort((a, b) => a.incl - b.incl)[0] || null;
   // Recommendations panel: cheapest first, then the rest of the priced partners ranked ascending; sold-out /
   // not-yet-loaded partners are listed separately, muted, at the end.
-  $: ranked = merged.filter((m) => m.val != null).sort((a, b) => a.val - b.val);
+  $: ranked = merged.filter((m) => m.val != null).sort((a, b) => a.incl - b.incl);
   $: unranked = merged.filter((m) => m.val == null);
 
   // ── compare: grid → room CARDS (grouped by room signature, meals within, partners cheapest-first) ──
@@ -997,7 +999,7 @@
         {#if best}
           <a class="hh-best" href={best.deepLink || "#"} target={best.deepLink ? "_blank" : null} rel="noopener" class:nolink={!best.deepLink}>
             <span class="hh-best-lbl">Best price</span>
-            <span class="hh-best-val">{inr(best.val)}{best.approx ? "~" : ""}</span>
+            <span class="hh-best-val">{inr(best.incl)}{best.approx ? "~" : ""}</span>
             <span class="hh-best-src">on {best.who} · per night</span>
             <span class="hh-best-cta">Book now <span class="hc-cta-ic">{@html icon("arrow")}</span></span>
           </a>
@@ -1035,7 +1037,7 @@
           <a class="pcard" class:best={best && best.who === m.who} href={m.deepLink || "#"} target={m.deepLink ? "_blank" : null} rel="noopener" class:nolink={!m.deepLink}>
             <div class="pcard-who">{#if PARTNER_LOGO[m.who]}<img class="pcard-logo" src={PARTNER_LOGO[m.who]} alt="" />{/if}{m.who}</div>
             {#if m.val != null}
-              <div class="pcard-amt">{inr(m.val)}{#if m.approx}<span class="usd-star" title="Approximate — Agoda prices are converted from USD at the current rate">*</span>{/if}<small>/night</small></div>
+              <div class="pcard-amt">{inr(m.tax ? m.val + m.tax : m.val)}{#if m.approx}<span class="usd-star" title="Approximate — Agoda prices are converted from USD at the current rate">*</span>{/if}<small>/night</small></div>
               {#if m.tax}<div class="pcard-tax">{inr(m.val)} + {inr(m.tax)} tax</div>{/if}
               {#if m.stay != null}<div class="pcard-total">{inr(m.stay)} total</div>{/if}
               <div class="pcard-src live">live</div>
