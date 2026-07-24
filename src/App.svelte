@@ -3,9 +3,10 @@
   import { fade, fly } from "svelte/transition";
   import { cubicOut } from "svelte/easing";
   const physEase = cubicOut;   // physical, non-bouncy ease-out for entrance motion
-  import { suggest, listHotels, fetchMeta, setHotelAlert, MODE } from "./lib/bridge.js";
+  import { suggest, listHotels, fetchMeta, setHotelAlert, calendarFetch, MODE } from "./lib/bridge.js";
   import { runCompare } from "./lib/orchestrate.js";
   import DatePicker from "./lib/DatePicker.svelte";
+  import RangeDatePicker from "./lib/RangeDatePicker.svelte";
   import mmtLogo from "./assets/partners/makemytrip.png";
   import goibiboLogo from "./assets/partners/goibibo.png";
   import cleartripLogo from "./assets/partners/cleartrip.png";
@@ -75,6 +76,7 @@
   let partners = {}, planCount = 0, doneCount = 0, runSeq = 0;
   let skyPartners = [];         // Skyscanner last-pass agents (Expedia / Trip.com / … + affiliate deeplinks)
   let planById = {};                          // pos → native ids from resolve (alert payload source)
+  let mmtCalendar = {};                       // ISO date → MMT indicative price, for the date-picker hints
   let alertMsg = "";                          // transient "alert set ✓" feedback
   const POS_BY_PROV = { mmt: 1288, goibibo: 1294, cleartrip: 1289, easemytrip: 2255, agoda: 2361, booking_com: 6871 };
 
@@ -347,6 +349,7 @@
     syncHash();
     const s = selected, myRun = ++runSeq;
     canonical = null; partners = {}; grid = []; skyPartners = []; hotelInfo = null; activeImage = null; doneCount = 0; planCount = 0; status = "resolving";
+    mmtCalendar = {};
     const target = { name: s.name, city: s.city, lat: s.lat != null ? +s.lat : null, lng: s.lng != null ? +s.lng : null,
       emt_hotel_id: s.emt_hotel_id || null, emt_secondary_id: s.emt_secondary_id || null, emt_durl: s.emt_durl || null,
       entityId: s.entityId || null };
@@ -371,6 +374,17 @@
         partners = partners;
         if (r.grid && r.grid.length) grid = r.grid;
         if (r.hotel) hotelInfo = r.hotel;
+        // Date-picker price hints — fire once MMT resolves to a real hotel id, keyed to this run so a stale
+        // reply after picking a different hotel can't paint the wrong calendar.
+        if (String(r.pos) === "1288" && r.ids && r.ids.hotel_id) {
+          const mmtIds = r.ids;
+          calendarFetch({
+            hotelId: mmtIds.hotel_id, cityCode: mmtIds.city_code || mmtIds.cityCode || null,
+            checkin: queryParams.checkin, checkout: queryParams.checkout,
+            rooms: queryParams.rooms, adults: queryParams.adults, children: queryParams.children,
+          }).then((cal) => { if (!stale() && cal && cal.prices) mmtCalendar = cal.prices; })
+            .catch(() => {});
+        }
         doneCount += 1;
       },
       onDone: (hotel) => { if (stale()) return; status = "done"; if (hotel) hotelInfo = hotel; },
@@ -602,14 +616,14 @@
         <button type="button" class="sb-btn" on:click={() => (barOpen = barOpen === "ci" ? null : "ci")}>
           <span class="sb-lbl">Check-in</span><span class="sb-val">{fmtDate(ci)}</span>
         </button>
-        {#if barOpen === "ci"}<div class="dp-pop" transition:fade={{ duration: 120 }}><DatePicker value={ci} min={todayISO} onSelect={(d) => { pickCi(d); barOpen = null; }} /></div>{/if}
+        {#if barOpen === "ci"}<div class="dp-pop dp-pop-range" transition:fade={{ duration: 120 }}><RangeDatePicker {ci} {co} min={todayISO} prices={mmtCalendar} onSelect={(newCi, newCo) => { ci = newCi; co = newCo; }} onClose={() => (barOpen = null)} /></div>{/if}
       </div>
       <div class="sb-cell" class:active={barOpen === "co"}>
         <span class="sb-ic">{@html icon("calendar")}</span>
         <button type="button" class="sb-btn" on:click={() => (barOpen = barOpen === "co" ? null : "co")}>
           <span class="sb-lbl">Check-out</span><span class="sb-val">{fmtDate(co)}</span>
         </button>
-        {#if barOpen === "co"}<div class="dp-pop" transition:fade={{ duration: 120 }}><DatePicker value={co} min={addDaysISO(ci, 1)} onSelect={(d) => { pickCo(d); barOpen = null; }} /></div>{/if}
+        {#if barOpen === "co"}<div class="dp-pop dp-pop-range dp-pop-r" transition:fade={{ duration: 120 }}><RangeDatePicker {ci} {co} min={todayISO} prices={mmtCalendar} onSelect={(newCi, newCo) => { ci = newCi; co = newCo; }} onClose={() => (barOpen = null)} /></div>{/if}
       </div>
       <div class="sb-cell" class:active={barOpen === "guests"}>
         <span class="sb-ic">{@html icon("users")}</span>
@@ -715,7 +729,7 @@
               </button>
               {#if openDate === "ci"}
                 <div class="dp-pop" transition:fade={{ duration: 120 }}>
-                  <DatePicker value={ci} min={todayISO} onSelect={pickCi} />
+                  <DatePicker value={ci} min={todayISO} onSelect={pickCi} prices={mmtCalendar} />
                 </div>
               {/if}
             </div>
@@ -728,7 +742,7 @@
               </button>
               {#if openDate === "co"}
                 <div class="dp-pop dp-pop-r" transition:fade={{ duration: 120 }}>
-                  <DatePicker value={co} min={addDaysISO(ci, 1)} onSelect={pickCo} />
+                  <DatePicker value={co} min={addDaysISO(ci, 1)} onSelect={pickCo} prices={mmtCalendar} />
                 </div>
               {/if}
             </div>

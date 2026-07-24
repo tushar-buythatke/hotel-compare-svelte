@@ -205,3 +205,10 @@ export async function listHotels({ city, params, name, page, filters, lat, lng, 
 	if (MODE === "ext") return await callExt("hotelListFetch", payload);
 	return await devSend("hotelList", payload, requestId);
 }
+
+// MMT per-day indicative prices for an already-resolved MMT hotel (date-picker hints). Ext-only — needs a
+// real browser fetch from the SW (MMT's WAF blocks server-side requests); no dev-mode equivalent.
+export async function calendarFetch({ hotelId, cityCode, countryCode, checkin, checkout, rooms, adults, children }) {
+	if (MODE !== "ext") return { prices: {} };
+	return await callExt("hotelCalendarFetch", { hotelId, cityCode, countryCode, checkin, checkout, rooms, adults, children });
+}

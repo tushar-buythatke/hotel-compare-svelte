@@ -3,6 +3,7 @@
   export let value = "";
   export let min = "";
   export let onSelect = () => {};
+  export let prices = {};   // ISO date -> indicative price (MMT calendar-availability), shown under the day
 
   const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const DOW = ["S", "M", "T", "W", "T", "F", "S"];
@@ -39,6 +40,8 @@
     if (disabled(d)) return;
     onSelect(toISO(d));
   }
+
+  const fmtPrice = (p) => p >= 1000 ? `${Math.round(p / 100) / 10}k` : String(Math.round(p));
 </script>
 
 <div class="dp" role="dialog" aria-label="Choose date">
@@ -60,9 +63,13 @@
         class:muted={d.getMonth() !== vm}
         class:today={sameDay(d, today)}
         class:selected={sameDay(d, selected)}
+        class:priced={!disabled(d) && prices[toISO(d)] != null}
         disabled={disabled(d)}
         on:click={() => choose(d)}
-      >{d.getDate()}</button>
+      >
+        <span class="dp-daynum">{d.getDate()}</span>
+        {#if !disabled(d) && prices[toISO(d)] != null}<span class="dp-hint">₹{fmtPrice(prices[toISO(d)])}</span>{/if}
+      </button>
     {/each}
   </div>
 </div>
@@ -77,12 +84,15 @@
   .dp-dow { display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 4px; }
   .dp-dow span { text-align: center; font-size: 11px; font-weight: 600; color: var(--v2-slate-300); padding: 4px 0; }
   .dp-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
-  .dp-day { height: 34px; border: none; background: none; border-radius: 9px; font-size: 13px; font-weight: 500; color: var(--v2-ink); cursor: pointer; transition: background var(--transition), color var(--transition); }
+  .dp-day { height: 40px; border: none; background: none; border-radius: 9px; font-size: 13px; font-weight: 500; color: var(--v2-ink); cursor: pointer; transition: background var(--transition), color var(--transition); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; padding: 0; }
   .dp-day:hover:not(:disabled) { background: var(--v2-indigo-050); color: var(--v2-indigo); }
   .dp-day.muted { color: var(--v2-slate-300); }
   .dp-day.today:not(.selected) { box-shadow: inset 0 0 0 1.5px var(--v2-indigo); color: var(--v2-indigo); }
   .dp-day.selected { background: var(--v2-indigo); color: #fff; font-weight: 700; }
   .dp-day:disabled { color: #d7dde5; cursor: not-allowed; }
+  .dp-hint { font-size: 9.5px; font-weight: 600; color: var(--v2-slate-300); line-height: 1; }
+  .dp-day.selected .dp-hint { color: rgba(255, 255, 255, 0.75); }
+  .dp-day.priced:hover:not(:disabled) .dp-hint { color: var(--v2-indigo); }
 
   :global(html.dark) .dp { background: #131a26; border-color: #26303f; }
   :global(html.dark) .dp-title, :global(html.dark) .dp-day { color: #e6e9ee; }
